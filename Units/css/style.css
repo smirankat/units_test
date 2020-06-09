@@ -1,0 +1,407 @@
+
+*,
+*:before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+@font-face {
+    font-family: 'DIN Pro Bold';
+    src: url('../fonts/DINPro-Bold.eot');
+    src: url('../fonts/DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro-Bold.woff') format('woff'),
+        url('../fonts/DINPro-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro Medium';
+    src: url('../fonts/DINPro-Medium.eot');
+    src: url('../fonts/DINPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro-Medium.woff') format('woff'),
+        url('../fonts/DINPro-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DIN Pro Medium';
+}
+
+.title {
+    font-family: 'DIN Pro Bold';
+    font-size: 3vw;
+    color: rgb(40, 40, 40);
+    font-weight: bold;
+    line-height: 1.311;
+    width: 45vw;
+    margin: auto;
+    padding: 4vw 0;
+}
+
+.video_lesson {
+    background: rgb(231, 231, 231) url(../img/video_lesson.png) no-repeat center center;
+    background-size: contain;
+    border-radius: 30rem;
+    width: 430px;
+    margin: auto;
+}
+
+.video_lesson_subtitle,
+.notebook_subtitle {
+    color: rgba(40, 40, 40, 0.6);
+    text-align: center;
+    margin: 3vw auto;
+}
+
+.notebook {
+    background: rgb(231, 231, 231) url(../img/notebook.png) no-repeat center 1rem;
+    background-size: contain;
+    border-radius: 30rem;
+    width: 430px;
+    margin: auto;
+}
+
+.video_lesson>div,
+.notebook>div {
+    width: 100%;
+    padding-bottom: 55%;
+}
+
+.notebook_subtitle {
+    max-width: 250px;
+}
+
+.main {
+    background: url(../img/bg.png) no-repeat center;
+    background-size: cover;
+    margin-top: 1vw;
+}
+
+.wrapper {
+    position: relative;
+    padding: 7vw 9vw 5vw 8vw;
+}
+
+.units,
+.units_experts_members {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.units_title {
+    font-family: 'DIN Pro Bold';
+    font-size: 3vw;
+    width: 18vw;
+    line-height: 1.2;
+}
+
+.units_photo {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+}
+
+.units_photo_pic {
+    width: 25vw;
+}
+
+.units_experts_Pavel {
+    font-weight: bold;
+    margin-bottom: 3vw;
+    ;
+}
+
+.units_experts_members {
+    color: rgba(40, 40, 40, 0.6);
+}
+
+ul {
+    padding-left: 20px;
+    padding-right: 8vw;
+}
+
+li {
+    color: rgb(109, 174, 233);
+}
+
+li span {
+    color: rgba(40, 40, 40, 0.6);
+}
+
+.units_experts_speaker_list {
+    max-width: 15vw;
+    margin-bottom: 1vw;
+}
+
+.units_experts_expert {
+    margin-bottom: .5vw;
+}
+
+.units_experts_experts>img {
+    width: 7vw;
+    margin-bottom: 3vw;
+}
+
+.team {
+    background: url(../img/team_bg.png) no-repeat center;
+    border-radius: 7px;
+    max-width: 67vw;
+    line-height: 2.2;
+}
+
+.team_wrapper {
+    padding: 2vw 4vw;
+}
+
+.team_title {
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+
+.team_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+
+.team_list_li2 {
+    display: none;
+}
+
+.team_photo_pic {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 3vw;
+    width: 45vw;
+}
+
+/* modal start */
+#myBtn {
+    cursor: pointer;
+}
+
+.mod {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(254, 254, 254, 0.9);
+}
+
+.mod_box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: url(../img/green.png) no-repeat center, url(../img/blue.png) no-repeat center, url(../img/cian.png) no-repeat center, url(../img/laptop.png) no-repeat center;
+    background-size: cover, cover, cover, cover;
+    width: 67vw;
+    height: 32vw;
+    border-radius: 15px;
+}
+
+.mod_box_text {
+    position: absolute;
+    top: 5vw;
+    left: 33vw;
+}
+
+.mod_box_text1 {
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+.mod_box_text2 {
+    font-size: 1.5vw;
+    color: rgba(254, 254, 254, 0.4);
+    width: 26vw;
+    margin-bottom: 2vw;
+}
+
+.mod_box_text3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 1.5vw;
+}
+
+.subscribe {
+    display: block;
+    border-radius: 43px;
+    color: rgb(34, 0, 255);
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 11px 27px 0px rgba(72, 0, 255, 0.29);
+            box-shadow: 0px 11px 27px 0px rgba(72, 0, 255, 0.29);
+    line-height: 2.4;
+    text-align: center;
+    width: 18vw;
+    height: 4vw;
+}
+
+.skip {
+    color: rgba(254, 254, 254, 0.7);
+    margin-top: .5vw;
+    margin-right: 4vw;
+}
+
+.skip>span {
+    font-size: 2vw;
+    vertical-align: middle;
+}
+
+/* modal end */
+@media only screen and (max-width: 992px) {
+    .units_experts_experts>img {
+        width: 12vw;
+    }
+
+    .team_list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .team_photo_pic {
+        right: 10vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mod_box {
+        width: 90vw;
+        height: 45vw;
+    }
+
+    .mod_box_text {
+        top: 5vw;
+        left: 40vw;
+    }
+
+    .mod_box_text1 {
+        font-size: 3vw;
+    }
+
+    .mod_box_text2,
+    .mod_box_text3 {
+        font-size: 2vw;
+    }
+
+    .subscribe {
+        width: 25vw;
+        height: 5vw;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .units {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .units_photo {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        margin-top: 10vw;
+    }
+
+    .units_experts_experts>img {
+        width: 20vw;
+    }
+
+    .units_title,
+    .title {
+        font-size: 24px;
+        width: 60vw;
+    }
+
+    .team {
+        line-height: 2;
+    }
+
+    .units_photo_pic {
+        width: 50vw;
+    }
+
+    .team_photo_pic {
+        position: relative;
+        margin: auto;
+        width: 80vw;
+        right: 0;
+    }
+
+    /* modal start */
+    .mod_box {
+        background: url(../img/green.png) no-repeat right, url(../img/blue.png) no-repeat right, url(../img/cian.png) no-repeat bottom, url(../img/laptop.png) no-repeat top left;
+        background-size: cover, cover, cover, cover;
+        width: 90vw;
+        height: 100vw;
+    }
+
+    .mod_box_text {
+        left: 2vw;
+    }
+
+    .mod_box_text1 {
+        font-size: 6vw;
+        margin-bottom: 10vw;
+    }
+
+    .mod_box_text2 {
+        width: 90vw;
+        font-size: 5vw;
+        color: rgb(255, 255, 255);
+        margin-bottom: 10vw;
+    }
+
+    .mod_box_text3 {
+        display: block;
+        font-size: 5vw;
+    }
+
+    .subscribe {
+        width: 60vw;
+        height: 13vw;
+    }
+
+    .skip {
+        display: block;
+        text-align: center;
+    }
+
+    .skip>span {
+        font-size: 6vw;
+    }
+
+}
